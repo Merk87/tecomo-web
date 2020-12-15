@@ -1,0 +1,5 @@
+tecomo_landing:
+    resource: "@TecomoLandingBundle/Resources/config/routing.yml"
+    prefix:   /
+    schemes: [https]
+

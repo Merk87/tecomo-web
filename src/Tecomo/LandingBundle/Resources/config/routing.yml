@@ -1,0 +1,3 @@
+tecomo_landing_homepage:
+    pattern:  /
+    defaults: { _controller: TecomoLandingBundle:Default:index }

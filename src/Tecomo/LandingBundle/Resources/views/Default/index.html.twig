@@ -1,0 +1,275 @@
+{% extends 'TecomoLandingBundle:Base:base.html.twig' %}
+
+{% block content %}
+    <section class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="col-md-6 col-md-offset-3">
+                            <img class="img-responsive" style="margin: 0 auto" src="{{ asset('bundles/landingbundle/img/logotecomo.png') }}">
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-8 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-2" style="padding-top: 30px">
+                            {% block flashmessages %}
+                                {% for flashMessage in app.session.flashbag.get('notice') %}
+                                    <div class="alert alert-gray alert-dismissable">
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        <strong>{{ flashMessage }}</strong>
+                                    </div>
+                                {% endfor %}
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {#<section id="portfolio">#}
+        {#<div class="portfolio-body">#}
+            {#<div class="container content-section" &#123;&#35;style="padding-bottom: 120px"&#35;&#125;>#}
+                {#<div class="row">#}
+                    {#<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">#}
+                        {#<h1 style="font-size: 50px!important;">Nuestros proyectos</h1>#}
+                    {#</div>#}
+                    {#<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-justify">#}
+
+                    {#</div>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+    {#</section>#}
+
+    <section id="why">
+        <div class="why-body">
+            <div class="container content-section text-justify">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="col-lg-12 text-center">
+                            <h1 style="font-size: 50px!important;">Aumenta el alcance de tu negocio</h1>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="//player.vimeo.com/video/107129782?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        {#<div class="col-lg-6 col-lg-offset-3 text-center separator"></div>#}
+                        {#<p class="col-lg-8 col-lg-offset-2"><img src="{{ asset('bundles/landingbundle/img/elements/as1.jpg') }}">Sera más facil encontrarte en internet.</p >#}
+                        {#<p class="col-lg-8 col-lg-offset-2"><img src="{{ asset('bundles/landingbundle/img/elements/as2.jpg') }}">Es más barato que invertir en publicidad tradicional.</p >#}
+                        {#<p class="col-lg-8 col-lg-offset-2"><img src="{{ asset('bundles/landingbundle/img/elements/as3.jpg') }}">Toda la información de tu negocio al alcance de tus clientes.</p >#}
+                        {#<p class="col-lg-8 col-lg-offset-2"><img src="{{ asset('bundles/landingbundle/img/elements/as4.png') }}">Cuanta más gente te conozca, más clientes conseguiras.</p >#}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="us">
+        <div class="us-body">
+            <div class="container content-section" {#style="padding-bottom: 120px"#}>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                        <h1 style="font-size: 50px!important;">Y, ¿por qué nosotros?</h1>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-justify">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-justify">
+                                <img class="img-circle faces img-responsive"  src="{{ asset('bundles/landingbundle/img/cabezones/kantt.jpg') }}">
+                                <a href="http://www.twitter.com/AntonioJCanto" target="_blank"><img title="Insultalo en twitter" class="social-logo" src="{{ asset('bundles/landingbundle/img/social/tw.png') }}"></a>
+                                <a href="http://kantt.tecomostudios.com?utm_campaign=profilelinks&utm_source=tecomoweb&utm_medium=avatarhome" target="_blank"><img title="Lee sus cosas" class="social-logo img-circle" src="{{ asset('bundles/landingbundle/img/social/kanttblog.jpg') }}"></a>
+                                <div class="col-lg-12">
+                                    <h3 class="nameTitle"><span class="aka" data-toggle="tooltip" data-placement="right" title="AKA Kanttarino, pue tengo yo una idea...">Antonio J. Canto</span></h3>
+                                    <p>Lleva mucho tiempo programando y desarrollando aplicaciones. Ultimamente solo le interesa el desarrollo web. Cree que se le da bien. Le hemos dicho que él manda en </strong>Tecomo</strong> (iluso). Es el guapo del grupo (o eso le dice su madre).</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-justify">
+                                <img class="img-circle faces img-responsive" src="{{ asset('bundles/landingbundle/img/cabezones/trejo.jpg') }}">
+                                <a href="http://www.twitter.com/trehote" target="_blank"><img title="Insultalo en twitter" class="social-logo" src="{{ asset('bundles/landingbundle/img/social/tw.png') }}"></a>
+                                <a href="http://javitrejo.tecomostudios.com?utm_campaign=profilelinks&utm_source=tecomoweb&utm_medium=avatarhome" target="_blank"><img title="Mira sus trabajos" class="social-logo img-circle" src="{{ asset('bundles/landingbundle/img/social/treho.png') }}"></a>
+                                <div class="col-lg-12">
+                                    <h3 class="nameTitle"><span class="aka" data-toggle="tooltip" data-placement="right" title="AKA Treho, cranibrillante diseñador">Javier Trejo</span></h3>
+                                    <p>Hace fotos. Diseña. Produce video. Hace música. Hace que todos nuestros trabajos sean más de lo que nuestros clientes esperan. No tiene pelo pero sus manos son una maravilla *guiño guiño*
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-justify">
+                                <img class="img-circle faces img-responsive img-responsive" src="{{ asset('bundles/landingbundle/img/cabezones/paip.jpg') }}">
+                                <a href="http://www.twitter.com/PiPePiTo" target="_blank"><img class="social-logo" title="Insultalo en twitter" src="{{ asset('bundles/landingbundle/img/social/tw.png') }}"></a>
+                                <div class="col-lg-12">
+                                    <h3 class="nameTitle"><span class="aka" data-toggle="tooltip" data-placement="right" title="AKA PiPePiTo, dice que programa...">Pepe Lara</span></h3>
+                                    <p>Dicen que las mentes más destrozadas son las más creativas. La de este hombre es muy creativa. Antes del mencionado deterioro mental, era un peso pesado en <strong>Tecomo.</strong> Ahora solo imagina cosas que los demás llevamos a cabo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-justify">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-lg-offset-2 text-justify">
+                                <img class="img-circle faces img-responsive" src="{{ asset('bundles/landingbundle/img/cabezones/edu.jpg') }}">
+                                <a href="http://www.twitter.com/Ed_TheWizard" target="_blank"><img class="social-logo" title="Insultalo en twitter" src="{{ asset('bundles/landingbundle/img/social/tw.png') }}"></a>
+                                <div class="col-lg-12">
+                                    <h3 class="nameTitle"><span class="aka" data-toggle="tooltip" data-placement="right" title="AKA Edu SD, el camaritas...">Eduardo Sanchez</span></h3>
+                                    <p>Fotógrafo, animador, diseñador... le gusta pintar con cariocas. Muy hipster él, y lo que de verdad le gusta (más incluso que pintar con los dedos) es la creación de efectos y la animación 3D y aunque no lo parece es muy bueno.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-justify">
+                                <img class="img-circle faces img-responsive" src="{{ asset('bundles/landingbundle/img/cabezones/merk.jpg') }}">
+                                <a href="http://www.twitter.com/Merk0101" target="_blank"><img class="social-logo" title="Insultalo en twitter" src="{{ asset('bundles/landingbundle/img/social/tw.png') }}"></a>
+                                <div class="col-lg-12">
+                                    <h3 class="nameTitle"><span class="aka" data-toggle="tooltip" data-placement="right" title="AKA Merkury, esta tarde nos ponemos...">Víktor Moreno</span></h3>
+                                    <p>Está enganchado al desarrollo web. Antes hacía PHP, ahora C#. No puede desengancharse del PHP, lo necesita. La constancia es su fuerte. Dice que Antonio no es el guapo. En solidaridad con Trejo, odia los peines.</p>
+                                    <!--Realmente Merkury es el que manda en todo este tinglado... :D-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technologies">
+        <div class="technologies-body">
+            <div class="container content-section" {#style="padding-bottom: 120px"#}>
+                <div class="col-lg-12 text-center">
+                    <h1 style="font-size: 50px!important;">¿Qué utilizamos?</h1>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-4 col-lg-offset-1" style="margin-bottom: 20px">
+                            <img class="img-circle img-responsive techCrest" data-path="{{ asset('bundles/landingbundle/img/logos/html5_hover.png') }}" src="{{ asset('bundles/landingbundle/img/logos/html5_blur.png') }}" data-title="html5">
+                        </div>
+                        <div class="col-lg-3 col-sm-4 col-lg-offset-1" style="margin-bottom: 20px">
+                            <img class="img-circle img-responsive techCrest" data-path="{{ asset('bundles/landingbundle/img/logos/css3_hover.png') }}" src="{{ asset('bundles/landingbundle/img/logos/css3_blur.png') }}" data-title="css3">
+                        </div>
+                        <div class="col-lg-3 col-sm-4 col-lg-offset-1" style="margin-bottom: 20px">
+                            <img class="img-circle img-responsive techCrest" data-path="{{ asset('bundles/landingbundle/img/logos/jquery_hover.png') }}" src="{{ asset('bundles/landingbundle/img/logos/jquery_blur.png') }}" data-title="jquery">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-12 col-lg-offset-2 col-md-12 col-md-offset-2 col-sm-12 col-sm-offset-2" style="margin-bottom: 35px;">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-4 col-lg-offset-1" style="margin-bottom: 20px">
+                            <img class="img-circle img-responsive techCrest" data-path="{{ asset('bundles/landingbundle/img/logos/symfony_hover.png') }}" src="{{ asset('bundles/landingbundle/img/logos/symfony_blur.png') }}" data-title="symfony">
+                        </div>
+                        <div class="col-lg-3 col-sm-4 col-lg-offset-1" style="margin-bottom: 20px">
+                            <img class="img-circle img-responsive  techCrest" data-path="{{ asset('bundles/landingbundle/img/logos/mysql_hover.png') }}" src="{{ asset('bundles/landingbundle/img/logos/mysql_blur.png') }}" data-title="mysql">
+                        </div>
+                    </div>
+                </div>
+                <div id="infoArea" class="col-lg-12">
+                    <div class="col-lg-12 infoHeader">
+                        <div class="row">
+                            <div class="col-lg-11"><h2 class="infoTitle"></h2></div>
+                            <div class="col-lg-1 pull-right"><button type="button" class="closeTechInfo pull-right"><i class="glyphicon glyphicon-remove"></i></button></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <p class="techInfo"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-body">
+            <div class="container content-section text-justify">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="col-lg-12 text-center">
+                            <h1 style="font-size: 50px!important;" class="hidden-xs">No seas tímido, ¡pregúntanos!</h1>
+                            <h1 class="hidden-lg hidden-md hidden-lg contactTitleMbl">No seas tímido, ¡pregúntanos!</h1>
+                        </div>
+                        <div class="col-lg-6 col-lg-offset-3 text-center separator"></div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="col-lg-3 hidden-xs hidden-sm hidden-md">
+                            <div class="col-lg-12 whatsyourname">
+                                <p>¿Como te llamas? <img src="{{ asset('bundles/landingbundle/img/arrows/flechaNombre.png') }}" style="position: absolute"></p>
+                            </div>
+                            <div class="col-lg-12 heresubject">
+                                <p>El asunto por aquí </p>
+                                <img class="subj" src="{{ asset('bundles/landingbundle/img/arrows/flechaAsunto.png') }}">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <form role="form" action="{{ path('tecomo_landing_homepage') }}" method="POST" class="contact-form">
+                                {{ form_errors(contactForm) }}
+
+                                <div class="form-group">
+                                    {{ form_label(contactForm.Nombre, '¿Como te llamas?', { 'label_attr': {'class': 'hidden-lg mobileFormLabel'} }) }}
+                                    {{ form_widget(contactForm.Nombre) }}
+                                </div>
+
+                                <div class="form-group">
+                                    {{ form_label(contactForm.Email, 'Email', { 'label_attr' : {'class': 'hidden-lg mobileFormLabel'} }) }}
+                                    {{ form_widget(contactForm.Email) }}
+                                </div>
+
+                                <div class="form-group">
+                                    {{ form_label(contactForm.Asunto, 'El asunto por aquí', { 'label_attr' : {'class': 'hidden-lg mobileFormLabel'} }) }}
+                                    {{ form_widget(contactForm.Asunto) }}
+                                </div>
+
+                                <div class="form-group">
+                                    {{ form_label(contactForm.Mensaje, '¿Qué quieres contarnos?', { 'label_attr' : {'class': 'hidden-lg mobileFormLabel'} }) }}
+                                    {{ form_widget(contactForm.Mensaje) }}
+                                </div>
+
+                                {{ form_rest(contactForm) }}
+                                <div class="form-group pull-left btn-message hidden-xs hidden-sm hidden-md" style="margin-top: 1.5em">
+                                    <p> ¡Click! </p>
+                                    <img src="{{ asset('bundles/landingbundle/img/arrows/flechaBtn.png') }}" class="arrowBtn">
+                                </div>
+                                <div class="form-group pull-right" style="margin-top: 1.5em">
+                                    <input type="submit" value="¡Envíar!" class="btn btn-info">
+                                </div>
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+                        <div class="col-lg-3 hidden-xs hidden-sm hidden-md">
+                            <div class="col-lg-12 heremail">
+                                <img src="{{ asset('bundles/landingbundle/img/arrows/flechaEmail.png') }}" class="arrowEmail">
+                                <p>Tu email aquí</p>
+                            </div>
+                            <div class="col-lg-12 heremessage">
+                                <p>¿Qué quieres contarnos?</p>
+                                <img src="{{ asset('bundles/landingbundle/img/arrows/flechaMensaje.png') }}" class="arrowMessage">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="copyright">
+        <div class="copyright-section">
+            <div class="container">
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                    <p>Diseñado y creado por Tecomo Studios © 2014</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="cochambre-body">
+        <div class="container">
+            <div class="col-lg-12 text-center">
+                <img class="img-responsive" src="{{ asset('bundles/landingbundle/img/elements/coch_down.png') }}">
+            </div>
+            <div class="col-lg-12">
+                <p class="cochaText">Por cierto, este es Cochambre, la mascota ;) </p>
+            </div>
+        </div>
+    </div>
+    <section id="cochambre">
+
+    </section>
+
+{% endblock %}

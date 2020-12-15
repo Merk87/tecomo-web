@@ -1,0 +1,7 @@
+parameters:
+#    tecomo_landing.example.class: Tecomo\LandingBundle\Example
+
+services:
+#    tecomo_landing.example:
+#        class: %tecomo_landing.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
